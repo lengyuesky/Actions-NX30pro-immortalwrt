@@ -57,11 +57,6 @@ jobs:
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
 
-    - name: git check tags
-      run: |
-        cd openwrt
-        git fetch --tags
-        git checkout $TAG
         
     - name: Load custom feeds
       run: |
